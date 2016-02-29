@@ -22,16 +22,6 @@
   "main": [
     "dist/ng-context-menu.js"
   ],
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "test",
-    "public",
-    "src",
-    "index.html",
-    "gulpfile.js",
-    "package.json"
-  ],
   "dependencies": {
     "angular": ">= 1.2.5"
   },

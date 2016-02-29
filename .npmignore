@@ -1,0 +1,8 @@
+**/.*
+node_modules
+test
+public
+src
+index.html
+gulpfile.js
+package.json
