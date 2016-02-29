@@ -19,9 +19,7 @@
   },
   "license": "MIT",
   "homepage": "http://ianwalter.github.io/ng-context-menu/",
-  "main": [
-    "dist/ng-context-menu.js"
-  ],
+  "main": "dist/ng-context-menu.js",
   "dependencies": {
     "angular": ">= 1.2.5"
   },
