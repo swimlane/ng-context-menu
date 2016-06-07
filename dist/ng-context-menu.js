@@ -28,6 +28,7 @@ angular
 
           function open(event, menuElement) {
             menuElement.addClass('open');
+            menuElement.css('position', 'fixed');
 
             var doc = $document[0].documentElement;
             var docLeft = (window.pageXOffset || doc.scrollLeft) -
