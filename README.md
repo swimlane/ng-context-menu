@@ -1,5 +1,7 @@
 Originally ianwalter/ng-context-menu
 
+This project is not maintained any longer. Please feel free to fork it if you need to make changes to the library.
+
 # [ng-context-menu](http://ianwalter.github.io/ng-context-menu/)
 *An AngularJS directive to display a context menu when a right-click event is triggered*
 
