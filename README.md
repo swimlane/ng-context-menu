@@ -105,4 +105,14 @@ that will be called whenever the context menu is closed.
 <div context-menu="onShow()" context-menu-close="onClose()"></div>
 ```
 
+#### Customizing the bind event
+
+By default, the context menu will open when the ```contextmenu``` event is triggered.  You can override this by specifying a value for the ```context-menu-event``` attribute.
+
+```html
+<div context-menu="onShow()" context-menu-close="onClose()" context-menu-event="click"></div>
+```
+
+Some possible values are ```contextmenu``` for right-click (default), ```click``` for left-click, ```focus```, ```onmouseover```, etc. You may specify multiple event types by separating them with a space.
+
 «–– [Ian](http://ianvonwalter.com)
