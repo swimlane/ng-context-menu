@@ -28,6 +28,7 @@ angular
 
           function open(event, menuElement) {
             menuElement.addClass('open');
+            menuElement.css('position', 'fixed');
 
             var doc = $document[0].documentElement;
             var docLeft = (window.pageXOffset || doc.scrollLeft) -
@@ -66,7 +67,9 @@ angular
             opened = false;
           }
 
-          $element.bind('contextmenu', function(event) {
+          var bindEvent = $attrs.contextMenuEvent ? $attrs.contextMenuEvent : "contextmenu";
+
+          $element.bind(bindEvent, function(event) {
             if (!$scope.disabled()) {
               if (ContextMenuService.menuElement !== null) {
                 close(ContextMenuService.menuElement);

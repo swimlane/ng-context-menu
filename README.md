@@ -24,7 +24,7 @@ var app = angular.module('menu-demo', ['ngRoute', 'ng-context-menu'])
 #### Step 3: Add the context-menu directive to a DOM element
 
 ```html
-<div context-menu class="panel panel-default position-fixed"
+<div context-menu class="panel panel-default"
      data-target="menu-{{ $index }}"
      ng-class="{ 'highlight': highlight, 'expanded' : expanded }">
   ...
@@ -35,7 +35,7 @@ var app = angular.module('menu-demo', ['ngRoute', 'ng-context-menu'])
 Customize the menu to your needs. It may look something like:
 
 ```html
-<div class="dropdown position-fixed" id="menu-{{ $index }}">
+<div class="dropdown" id="menu-{{ $index }}">
   <ul class="dropdown-menu" role="menu">
     <li>
       <a class="pointer" role="menuitem" tabindex="1"
@@ -78,16 +78,6 @@ Customize the menu to your needs. It may look something like:
 </div>
 ```
 
-#### Step 5: Make sure your menu is has the ```position: fixed``` CSS property
-
-As you can see in the demo, I just created a class called position-fixed and added the property:
-
-```css
-.position-fixed {
-  position: fixed;
-}
-```
-
 #### Disabling the contextmenu
 
 If you need to disable the contextmenu in certain circumstances, you can add an expression to the
@@ -104,5 +94,15 @@ that will be called whenever the context menu is closed.
 ```html
 <div context-menu="onShow()" context-menu-close="onClose()"></div>
 ```
+
+#### Customizing the bind event
+
+By default, the context menu will open when the ```contextmenu``` event is triggered.  You can override this by specifying a value for the ```context-menu-event``` attribute.
+
+```html
+<div context-menu="onShow()" context-menu-close="onClose()" context-menu-event="click"></div>
+```
+
+Some possible values are ```contextmenu``` for right-click (default), ```click``` for left-click, ```focus```, ```onmouseover```, etc.
 
 «–– [Ian](http://ianvonwalter.com)
